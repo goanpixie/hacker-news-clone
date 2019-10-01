@@ -1,24 +1,20 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import logo from './logo.svg';
+import { colorsDark } from 'styles/palette';
+// import List from './components/List';
+import { Title, Wrapper } from './styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={colorsDark}>
+      <div>
+        <Wrapper>
+          <Title>Hacker Rank News</Title>
+          {/* <List/> */}
+        </Wrapper>
+      </div>
+    </ThemeProvider>
   );
 }
 
