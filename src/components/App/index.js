@@ -20,7 +20,7 @@ const mapStateToProps = state=> ({
 Creates special function which will allow
 our components to talk to redux store*/
 const mapDispatchToProps = dispatch => ({
-  fetchStoriesFirstPage:()=>dispatch(actions.fetcStoryIds()),
+  fetchStoriesFirstPage: ()=>dispatch(actions.fetchStoryIds()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
