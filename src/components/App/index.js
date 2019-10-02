@@ -1,21 +1,26 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import logo from './logo.svg';
-import { colorsDark } from 'styles/palette';
-import List from 'components/List';
-import { Title, Wrapper } from './styles';
+import { connect } from 'react-redux';
+import actions from 'store/story/actions';
+import App from './App';
 
-function App() {
-  return (
-    <ThemeProvider theme={colorsDark}>
-      <div>
-        <Wrapper>
-          <Title>Hacker News for you!</Title>
-          <List/>
-        </Wrapper>
-      </div>
-    </ThemeProvider>
-  );
-}
+/*Connect function will take two arguements. Both these functions,
+mapStateToProps and mapDispatchToProps will return objects which
+it will then pass values as props to our components
+*/
 
-export default App;
+/*This is passing state as props using it as
+data in your function*/
+const mapStateToProps = state=> ({
+    stories: state.story.stories,
+    page: state.story.page,
+    storyIds: state.story.storyIds,
+    isFetching:state.story.isFetching,
+})
+
+/*used to trigger new actions inside our components.
+Creates special function which will allow
+our components to talk to redux store*/
+const mapDispatchToProps = dispatch => ({
+  fetchStoriesFirstPage:()=>dispatch(actions.fetcStoryIds()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
