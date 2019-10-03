@@ -6,11 +6,13 @@
     "axios": "^0.19.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-infinite-scroller": "^1.2.4",
     "react-redux": "^7.1.1",
     "react-scripts": "3.1.2",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "styled-components": "^4.4.0",
     "timeago.js": "^4.0.0-beta.2",
     "url": "^0.11.0"

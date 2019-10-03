@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { colorsDark } from 'styles/palette';
 import List from 'components/List';
 import { Title, Wrapper } from './styles';
+import Loader from 'components/Loader';
 
 class App extends Component {
 /*call function to load first page. Call it inside ComponentDidMount.
