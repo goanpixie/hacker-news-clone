@@ -11,7 +11,9 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "timeago.js": "^4.0.0-beta.2",
+    "url": "^0.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
