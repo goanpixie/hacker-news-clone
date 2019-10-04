@@ -6,5 +6,5 @@ const storiesSelector = state => state.story.stories;
 export const hasMoreStoriesSelector = createSelector(
 	storyIdsSelector,
 	storiesSelector,
-	(storyIds,stories)=>storyIds.length>stories.length,
+	(storyIds,stories) => storyIds.length>stories.length,
 )
